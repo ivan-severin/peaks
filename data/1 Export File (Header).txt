@@ -1,0 +1,8 @@
+//Exported ASCII-File
+[Header]
+FileName = C:\Documents and Settings\user\Desktop\opal8_532+SiSiO2.WIP
+GraphName = Scan_011_Spec.Data 1_F
+SizeX = 50
+SizeY = 50
+SizeGraph = 1600
+DataUnit = CCD cts
