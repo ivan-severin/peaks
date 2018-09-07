@@ -1,5 +1,5 @@
 import numpy as np
-import seaborn as sns
+# import seaborn as sns
 import matplotlib.pyplot as plt
 
 from spectrum import Spetrumn
@@ -94,25 +94,30 @@ class Mapping(object):
         return heatmap
 
     def plot(self):
-        spec = Spetrumn(self.x_axis, self.y_axis[16, 5])
-        plt.plot(spec.x, spec.y)
-        print("baseline shape:", spec.baseline.shape)
-        print("baseline:", spec.baseline[:5])
+        pass
 
-        print("indexes shape:", spec.indexes.shape)
-        print("indexes:", spec.indexes[:5])
+        # spec = Spetrumn(self.x_axis, self.y_axis[16, 5])
+        # plt.plot(spec.x, spec.y)
+        # print("baseline shape:", spec.baseline.shape)
+        # print("baseline:", spec.baseline[:5])
+        #
+        # print("indexes shape:", spec.indexes.shape)
+        # print("indexes:", spec.indexes[:5])
+        #
+        # print("fwhm shape:", spec.fwhm.shape)
+        # print("fwhm:", spec.fwhm[:5])
 
-        print("fwhm shape:", spec.fwhm.shape)
-        print("fwhm:", spec.fwhm[:5])
+        # spec.plot_all()
 
-        spec.plot_all()
-        np.apply_along_axis()
-        plt.show()
+
+        # plt.show()
+        # for i, ival in enumerate(spec.y[])
+
 
     def plot_heatmap(self):
-        ax = sns.heatmap(self.gen_heatmap(500, 600), cmap="YlGnBu")
+        pass
+        # ax = sns.heatmap(self.gen_heatmap(500, 600), cmap="YlGnBu")
 
-        plt.show()
+        # plt.show()
 
-    # def find_all_peaks(self):
 

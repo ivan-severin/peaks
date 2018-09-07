@@ -19,7 +19,7 @@ class Spetrumn(object):
     peaks = np.array
     fwhm = np.array
 
-    def __init__(self):
+    def __init__(sel):
         pass
 
     def calc_run(self, x_data, y_data, dd=50):
@@ -36,8 +36,6 @@ class Spetrumn(object):
         self.calc_baseline()
         self.calc_peak_indexes(limit_peaks=True)
         self.calc_fwhm()
-
-
 
     def get_peaks(self, interpolate=False):
         return peakutils.interpolate(self.x, self.y, ind=self.indexes)
@@ -78,7 +76,8 @@ class Spetrumn(object):
             self.indexes = peakutils.indexes(self.y_smooth, thres=thres + 0.3, min_dist=min_dist + 20)
 
     def fwhm3(self, peakpos=-1, baseline=0.):
-        """calculates the full width at half maximum (fwhm) of some curve.
+        """
+        calculates the full width at half maximum (fwhm) of some curve.
         the function will return the fwhm with sub-pixel interpolation.
          It will start at the maximum position and 'walk' left and right until it approaches the half values.
         INPUT:
